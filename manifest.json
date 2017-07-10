@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube add skipper",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon2.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+        "js": ["jquery.min.js", "myscript.js"]
+      }
+    ],
+    "background": {
+      "page" : "background.html"
+    },
+    "permissions" : ["https://www.youtube.com/"]
+}
